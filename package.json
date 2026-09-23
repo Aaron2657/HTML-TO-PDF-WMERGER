@@ -1,0 +1,22 @@
+{
+  "name": "html-to-pdf-merger",
+  "version": "1.0.0",
+  "description": "Convert a folder of HTML files into a single, merged PDF with custom footers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "html",
+    "pdf",
+    "puppeteer",
+    "pdf-lib",
+    "merge"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^22.0.0"
+  }
+}
