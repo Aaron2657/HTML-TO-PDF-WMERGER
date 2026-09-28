@@ -88,6 +88,14 @@ async function main() {
         margin: { top: '0', bottom: '12mm', left: '0', right: '0' },
       });
 
+      // Save individual PDF
+      const individualDir = path.join(outputFolder, 'individual_pdfs');
+      if (!fs.existsSync(individualDir)) {
+        fs.mkdirSync(individualDir, { recursive: true });
+      }
+      const individualPdfPath = path.join(individualDir, file.replace(/\.html$/i, '.pdf'));
+      fs.writeFileSync(individualPdfPath, pdfBuffer);
+
       pdfBuffers.push(pdfBuffer);
       console.log('OK');
     } catch (err) {
